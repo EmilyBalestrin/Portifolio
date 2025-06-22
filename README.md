@@ -2,6 +2,10 @@
 
 Bem-vindo(a) ao meu portfólio pessoal, desenvolvido com o objetivo de apresentar meus projetos, habilidades e experiências.
 
+Além disso, este projeto foi desenvolvido como **trabalho final da disciplina de Programação Web** do curso de Ciência da Computação da **Universidade Regional Integrada do Alto Uruguai e das Missões (URI)**, com o intuito de validar os conhecimentos adquiridos ao longo da disciplina.
+
+---
+
 🔗 **Acesse aqui**: [emilybalestrin.github.io/Portifolio](https://emilybalestrin.github.io/Portifolio/)
 
 ---
@@ -44,6 +48,14 @@ Formulário funcional para envio de mensagens diretamente ao meu e-mail via **Fo
 - 🌙 **Modo claro/escuro**: alternância de tema com botão fixo no topo do site.
 - 📬 **Formulário funcional**: integração com **Formspree** para recebimento de mensagens.
 - 📱 **Responsividade**: layout adaptado para **telas grandes, médias e pequenas**, com uso de **Bootstrap** e **media queries** para garantir uma boa experiência em qualquer dispositivo.
+
+---
+
+## 📌 Contato
+
+- 📧 Pessoal: emilyl.balestrin@gmail.com
+- 🔗 LinkedIn: [linkedin.com/in/emilyl.balestrin](https://www.linkedin.com/in/emily-l-balestrin/)
+
 
 ---
 
