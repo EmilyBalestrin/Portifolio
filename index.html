@@ -1,16 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Emily L. Balestrin, dev. Back-End">
 
-    <title>Meu Portifólio</title>
+    <title>Emily L. Balestrin - Portfólio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/root.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
 
 </head>
-<body>
 
-<header></header>
-<main></main>
-<footer></footer>
+<body>
+<header class="fixed-top bg-white shadow-sm">
+    <nav class="navbar container d-flex justify-content-between align-items-center" aria-label="Navegação principal">
+        <div class="flex-grow-1 d-flex justify-content-center">
+            <ul class="nav" role="menubar">
+                <li class="nav-item" role="none"><a href="#home" class="nav-link" role="menuitem">Início</a></li>
+                <li class="nav-item" role="none"><a href="#skills" class="nav-link" role="menuitem">Habilidades</a></li>
+                <li class="nav-item" role="none"><a href="#experience" class="nav-link" role="menuitem">Experiência</a></li>
+                <li class="nav-item" role="none"><a href="#certifications" class="nav-link" role="menuitem">Certificações</a></li>
+                <li class="nav-item" role="none"><a href="#projects" class="nav-link" role="menuitem">Projetos</a></li>
+                <li class="nav-item" role="none"><a href="#contact" class="nav-link" role="menuitem">Contato</a></li>
+            </ul>
+        </div>
+
+        <!-- Botão para alternar tema -->
+        <button id="toggle-theme" class="btn btn-outline-primary" aria-label="Alternar tema claro e escuro" type="button">
+            <i class="fa-regular fa-sun"></i>
+        </button>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="vh-100 d-flex align-items-center" aria-labelledby="heading-home">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <article class="col-md-6 text-center text-md-start order-1 pe-md-10">
+                    <header>
+                        <span class="badge bg-primary fs-6 mb-3">Olá, meu nome é</span>
+                        <h1 id="heading-home" class="display-4 fw-bold mb-3">Emily L. Balestrin</h1>
+                    </header>
+                    <p class="text-muted mb-4" role="doc-subtitle">
+                        Sou uma estudante de Ciência da Computação e apaixonada
+                        por tecnologia. Atualmente trabalho com assistência técnica, o que me aproximou ainda
+                        mais desse universo e despertou meu interesse em áreas como desenvolvimento e dados.
+                    </p>
+                    <p class="text-muted mb-4" role="doc-subtitle">
+                        Gosto de explorar, entender como as coisas funcionam e, sempre que possível,
+                        aprender algo novo. Este portfólio é um espaço onde compartilho um pouco da minha trajetória,
+                        projetos e aprendizados enquanto sigo evoluindo na área da computação.
+                    </p>
+                    <p class="lead text-muted mb-0">Seja muito bem-vindo(a)!</p>
+                </article>
+
+                <figure class="col-md-4 text-center order-2 pe-md-10">
+                    <img src="./assets/images/fotoPerfil.jpg"
+                         alt="Emily Balestrin - Foto de perfil"
+                         class="img-fluid rounded-circle profile-photo shadow"
+                         width="250"
+                         height="250">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="vh-100 d-flex align-items-center" aria-labelledby="heading-skills">
+        <div class="container text-center">
+            <h2 id="heading-skills" class="mb-5">Habilidades</h2>
+            <p class="text-muted mb-5">Aqui estão algumas das tecnologias e ferramentas com as quais já tive contato.</p>
+            <div class="row g-4 justify-content-center" role="list">
+
+                <!-- Java -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/java.png" alt="Java" title="Java" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- C++ -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="assets/icons/cplus.png" alt="C+" title="C++" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- HTML -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/html.png" alt="HTML" title="HTML" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- CSS -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/css.png" alt="CSS" title="CSS" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- JavaScript -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/javascript.png" alt="JavaScript" title="JavaScript" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- C# -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/csharp.png" alt="C#" title="C#" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- Python -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/python.png" alt="Python" title="Python" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- Spring Boot -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/springboot.png" alt="Spring Boot" title="Spring Boot" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- Git -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/git.png" alt="Git" title="Git" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- GitHub -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/github.png" alt="GitHub" title="GitHub" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- AWS -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/aws.png" alt="AWS" title="AWS" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- Postman -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/postman.png" alt="Postman" title="Postman" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- MySQL -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/mysql.png" alt="MySQL" title="MySQL" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+                <!-- MongoDB -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
+                        <img src="./assets/icons/mongo-db.png" alt="MongoDB" title="MongoDB" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5" aria-labelledby="heading-experience">
+        <div class="container text-center">
+            <h2 id="heading-experience" class="mb-4 text-center">Experiência Profissional</h2>
+            <div class="timeline">
+
+                <!-- Card Direito -->
+                <div class="timeline-container right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card card shadow-sm">
+                        <h3>Assistência técnica de TI</h3>
+                        <p class="text-muted mb-1">Aties · Abril/2025 - Presente</p>
+                        <p> Atuação na manutenção de equipamentos eletrônicos de informática, prestando suporte técnico a
+                            clientes e garantindo o funcionamento adequado dos dispositivos. </p>
+                        <p> Atuação na revenda e implantação de sistemas de emissão de notas fiscais,
+                            além da administração de backups em nuvem para empresas parceiras. </p>
+                    </div>
+                </div>
+
+                <!-- Card Esquerdo -->
+                <div class="timeline-container left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card card shadow-sm">
+                        <h3>Estágio Dev Backend</h3>
+                        <p class="text-muted mb-1">Compass UOL · Outubro/2024 - Maio/2025</p>
+                        <p>Estágio na trilha Back-End com Java da Compass UOL, com foco em desenvolvimento de aplicações
+                            com Spring Boot e práticas de engenharia de software.</p>
+                        <p>Atuação com criação de APIs RESTful, uso de Docker, arquitetura de microsserviços,
+                            mensageria assíncrona e banco de dados SQL/NoSQL. Implantação em nuvem utilizando AWS
+                            e metodologias ágeis com Scrum.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="vh-100 d-flex align-items-center" aria-labelledby="heading-certifications">
+        <div class="container text-center">
+            <h2 id="heading-certifications" class="mb-5">Certificações</h2>
+            <p class="text-muted mb-5">Alguns dos certificados obtidos em plataformas de ensino e validação profissional.</p>
+
+            <div class="row g-4 justify-content-center" role="list">
+                <!-- Certificação CloudPractitioner -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/badges/c76b4bb3-dbaa-4a9f-a873-5dfb3c3d5bdb/public_url" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/cloudPractitioner.png"
+                             alt="AWS Certified Cloud Practitioner"
+                             title="AWS Certified Cloud Practitioner"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+
+                <!-- Certificação CloudPractitioner Quest -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/badges/f7f2e953-5241-4cf2-8d0d-cc0502ebb142/public_url" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/cloudPractitionerQuest.png"
+                             alt="AWS Certified Cloud Practitioner Quest"
+                             title="AWS Certified Cloud Practitioner Quest"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+
+                <!-- Certificação CloudEssentials -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/badges/23ca36a3-bc2f-47b0-ae69-a766df8de42b/public_url" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/cloudEssentials.png"
+                             alt="AWS Certified Cloud Essentials"
+                             title="AWS Certified Cloud Essentials"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+
+                <!-- AWS Partner: Cloud Economics Essentials -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/earner/earned/badge/e55bbd4e-23f1-4133-b704-3d314be5b099" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/cloudEconomics.png"
+                             alt="AWS Partner: Cloud Economics Essentials"
+                             title="AWS Partner: Cloud Economics Essentials"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+
+                <!-- Certificação AWS Partner: Technical Accredited -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/earner/earned/badge/ebfc202d-244a-4163-a832-aa35f878936c" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/technicalAccreduted.png"
+                             alt="AWS Partner: Technical Accredited"
+                             title="AWS Partner: Technical Accredited"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+
+                <!-- Certificação AWS Partner: Sales Accreditation -->
+                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
+                    <a href="https://www.credly.com/earner/earned/badge/063c814e-cb9c-4bf8-8656-ad2b9c10d7f3" target="_blank" rel="noopener noreferrer"
+                       class="card h-100 d-flex align-items-center justify-content-center p-3 cert-badge text-decoration-none">
+                        <img src="./assets/certificates/salesAccredited.png"
+                             alt="AWS Partner: Sales Accreditation"
+                             title="AWS Partner: Sales Accreditation"
+                             class="img-fluid" style="max-height: 150px;">
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-5" aria-labelledby="heading-projects">
+        <div class="container">
+            <h2 id="heading-projects" class="text-center mb-2">Projetos Destacados</h2>
+            <p class="text-center text-muted mb-5">Uma seleção dos meus trabalhos mais interessantes.</p>
+
+            <div class="row g-4">
+
+                <!-- Projeto: Challenge 3 - Microserviços -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-0 shadow-sm border-0" style="background-color: var(--bg-dark); border-radius: 1rem;">
+                        <img src="./assets/images/challenge3-card.jpg" class="card-img-top rounded-top" alt="Arquitetura dos microserviços de ingressos">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">Microserviços de Eventos e Ingressos</h5>
+                            <p class="card-text text-muted">
+                                Projeto dividido em dois microserviços: gerenciamento de eventos e emissão de ingressos.
+                                Utiliza RabbitMQ para comunicação assíncrona, integração com ViaCEP e arquitetura orientada a eventos.
+                                Deploy na AWS com Docker.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-secondary">Java 17</span>
+                                <span class="badge rounded-pill bg-secondary">Spring Boot</span>
+                                <span class="badge rounded-pill bg-secondary">MongoDB</span>
+                                <span class="badge rounded-pill bg-secondary">RabbitMQ</span>
+                                <span class="badge rounded-pill bg-secondary">Docker</span>
+                                <span class="badge rounded-pill bg-secondary">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Manipulação com Pandas -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-0 shadow-sm border-0" style="background-color: var(--bg-dark); border-radius: 1rem;">
+                        <img src="./assets/images/pandas.jpg" class="card-img-top rounded-top" alt="Gráfico e dataframe em Python">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">Manipulação com Pandas</h5>
+                            <p class="card-text text-muted">
+                                Projeto simples utilizando Python e a biblioteca Pandas para realizar operações de limpeza,
+                                organização e análise exploratória em um conjunto de dados armazenado em CSV.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-secondary">Python</span>
+                                <span class="badge rounded-pill bg-secondary">Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Simulação de Corrida com OpenMP -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-0 shadow-sm border-0" style="background-color: var(--bg-dark); border-radius: 1rem;">
+                        <img src="./assets/images/openmp-race.jpg" class="card-img-top rounded-top" alt="Simulação de corrida com paralelismo">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">Simulação de Corrida com OpenMP</h5>
+                            <p class="card-text text-muted">
+                                Projeto desenvolvido para a disciplina de Programação Paralela. Simula uma corrida de carros com múltiplas threads, utilizando OpenMP para comparar o desempenho entre execuções sequencial e paralela.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-secondary">C++</span>
+                                <span class="badge rounded-pill bg-secondary">OpenMP</span>
+                                <span class="badge rounded-pill bg-secondary">Programação Paralela</span>
+                                <span class="badge rounded-pill bg-secondary">g++</span>
+                                <span class="badge rounded-pill bg-secondary">MinGW</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Gerenciador de Carrinho com Java & JDBC -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-0 shadow-sm border-0" style="background-color: var(--bg-dark); border-radius: 1rem;">
+                        <img src="./assets/images/shopping-cart-java.png" class="card-img-top rounded-top" alt="Carrinho de compras Java JDBC">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">Gerenciador de Carrinho (Java & JDBC)</h5>
+                            <p class="card-text text-muted">
+                                Aplicação em Java 17 com JDBC para controle de carrinho de compras em uma loja virtual. Executado via terminal, com persistência de dados em banco MySQL.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-secondary">Java 17</span>
+                                <span class="badge rounded-pill bg-secondary">JDBC</span>
+                                <span class="badge rounded-pill bg-secondary">MySQL</span>
+                                <span class="badge rounded-pill bg-secondary">Console App</span>
+                                <span class="badge rounded-pill bg-secondary">IntelliJ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto: Conversor de Cores RGB, CMYK e HSV -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-0 shadow-sm border-0" style="background-color: var(--bg-dark); border-radius: 1rem;">
+                        <img src="./assets/images/color-converter.jpg" class="card-img-top rounded-top" alt="Conversor de cores RGB CMYK HSV">
+                        <div class="card-body">
+                            <h5 class="card-title text-light">Conversor RGB, CMYK e HSV</h5>
+                            <p class="card-text text-muted">
+                                Conversor interativo entre os modelos de cor RGB, CMYK e HSV com visualização da cor em tempo real e escala de cinza. Desenvolvido como TDE para a disciplina de Processamento de Imagens.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-secondary">Svelte</span>
+                                <span class="badge rounded-pill bg-secondary">HTML5</span>
+                                <span class="badge rounded-pill bg-secondary">CSS3</span>
+                                <span class="badge rounded-pill bg-secondary">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5" aria-labelledby="heading-contact">
+        <div class="container">
+            <h2 id="heading-contact" class="text-center mb-2">Entre em Contato</h2>
+            <p class="text-center text-muted mb-5">Interessado(a) em entrar em contato comigo? Use os links abaixo.</p>
+
+            <!-- Blocos de Contato -->
+            <div class="card p-4 shadow-sm contact-card-custom mx-auto">
+                <div class="row g-4 justify-content-center d-flex align-items-stretch text-center">
+                    <!-- Email -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-item">
+                            <div class="icon-wrapper mb-2">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <small class="d-block">Email</small>
+                            <a href="mailto:emilyl.balestrin@gmail.com" class="contact-link">emilyl.balestrin@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-item">
+                            <div class="icon-wrapper mb-2">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </div>
+                            <small class="d-block">LinkedIn</small>
+                            <a href="https://linkedin.com/in/emily-l-balestrin" target="_blank" class="contact-link">/emily-l-balestrin</a>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="col-12 col-md-4">
+                        <div class="contact-item">
+                            <div class="icon-wrapper mb-2">
+                                <i class="fab fa-github fa-2x"></i>
+                            </div>
+                            <small class="d-block">GitHub</small>
+                            <a href="https://github.com/EmilyBalestrin" target="_blank" class="contact-link">@EmilyBalestrin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <div class="row justify-content-center mt-4">
+            <div class="row g-4 justify-content-center d-flex align-items-stretch text-center">
+                <p class="text-center text-muted mb-5">Ou, se preferir, me envie uma mensagem diretamente</p>
+                <div class="card shadow-sm p-4 contact-card-custom">
+                    <form id="form-contato">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nome" class="form-label text-light">Nome</label>
+                                <input type="text" class="form-control input-custom" id="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label text-light">Email</label>
+                                <input type="email" class="form-control input-custom" id="email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="mensagem" class="form-label text-light">Mensagem</label>
+                                <textarea class="form-control input-custom" id="mensagem" rows="3" placeholder="Digite sua mensagem aqui..." required></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-outline-primary">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-3 row justify-content-center align-items-space-between">
+    <div class="container text-center justify-content-end">
+        <p>&copy; 2025 Emily Balestrin. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    });
+</script>
+
+<script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    const body = document.body;
+    const sunIconClass = 'fa-sun';
+    const moonIconClass = 'fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('light-theme');
+        document.documentElement.classList.toggle('light-theme'); // Adiciona ao :root
+
+        // Alternar ícone
+        const icon = toggleBtn.querySelector('i');
+        if (body.classList.contains('light-theme')) {
+            icon.classList.remove(sunIconClass);
+            icon.classList.add(moonIconClass);
+        } else {
+            icon.classList.remove(moonIconClass);
+            icon.classList.add(sunIconClass);
+        }
+    });
+</script>
+
+<script>
+    document.getElementById("form-contato").addEventListener("submit", function (e) {
+        e.preventDefault(); // Impede envio padrão
+
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        fetch("https://script.google.com/macros/s/AKfycbxcXg941Q19i46dMPSb26VW9P5ni-e4YJ4EdmxJAER4MvFrqe_ot_tZWLMK8VPcRbAl3w/exec", {
+            method: "POST",
+            body: JSON.stringify({ nome, email, mensagem }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert("Mensagem enviada com sucesso!");
+                document.getElementById("form-contato").reset();
+            })
+            .catch(error => {
+                alert("Erro ao enviar mensagem. Tente novamente.");
+                console.error(error);
+            });
+    });
+</script>
 
 </body>
 </html>
