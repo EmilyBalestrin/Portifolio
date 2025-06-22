@@ -19,8 +19,15 @@
 <body>
 <header class="fixed-top bg-white shadow-sm">
     <nav class="navbar container d-flex justify-content-between align-items-center" aria-label="Navegação principal">
-        <div class="flex-grow-1 d-flex justify-content-center">
-            <ul class="nav" role="menubar">
+
+        <!-- Botão menu sanduíche (mobile only) -->
+        <button class="menu-toggle d-md-none" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Lista de navegação (ativa/desativa no JS) -->
+        <div class="flex-grow-1 d-flex justify-content-center justify-content-md-center">
+            <ul class="nav nav-menu d-none d-md-flex" role="menubar">
                 <li class="nav-item" role="none"><a href="#home" class="nav-link" role="menuitem">Início</a></li>
                 <li class="nav-item" role="none"><a href="#skills" class="nav-link" role="menuitem">Habilidades</a></li>
                 <li class="nav-item" role="none"><a href="#experience" class="nav-link" role="menuitem">Experiência</a></li>
@@ -30,7 +37,7 @@
             </ul>
         </div>
 
-        <!-- Botão para alternar tema -->
+        <!-- Botão de alternar tema -->
         <button id="toggle-theme" class="btn btn-outline-primary" aria-label="Alternar tema claro e escuro" type="button">
             <i class="fa-regular fa-sun"></i>
         </button>
@@ -72,7 +79,7 @@
 
     <section id="skills" class="vh-100 d-flex align-items-center" aria-labelledby="heading-skills">
         <div class="container text-center">
-            <h2 id="heading-skills" class="mb-5">Habilidades</h2>
+            <h2 id="heading-skills" class="mb-4">Habilidades</h2>
             <p class="text-muted mb-5">Aqui estão algumas das tecnologias e ferramentas com as quais já tive contato.</p>
             <div class="row g-4 justify-content-center" role="list">
 
@@ -111,13 +118,6 @@
                     </div>
                 </article>
 
-                <!-- C# -->
-                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
-                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
-                        <img src="./assets/icons/csharp.png" alt="C#" title="C#" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
-                    </div>
-                </article>
-
                 <!-- Python -->
                 <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
                     <div class="card h-100 d-flex align-items-center justify-content-center p-3">
@@ -153,13 +153,6 @@
                     </div>
                 </article>
 
-                <!-- Postman -->
-                <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
-                    <div class="card h-100 d-flex align-items-center justify-content-center p-3">
-                        <img src="./assets/icons/postman.png" alt="Postman" title="Postman" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
-                    </div>
-                </article>
-
                 <!-- MySQL -->
                 <article class="col-6 col-sm-4 col-md-3 col-lg-2" role="listitem">
                     <div class="card h-100 d-flex align-items-center justify-content-center p-3">
@@ -173,7 +166,6 @@
                         <img src="./assets/icons/mongo-db.png" alt="MongoDB" title="MongoDB" data-bs-toggle="tooltip" class="img-fluid" style="max-height: 80px;">
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
@@ -512,6 +504,44 @@
             icon.classList.remove(moonIconClass);
             icon.classList.add(sunIconClass);
         }
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open', isOpen);
+
+            // Troca ícone e acessibilidade
+            if (isOpen) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                toggleBtn.setAttribute('aria-label', 'Fechar menu');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                toggleBtn.setAttribute('aria-label', 'Abrir menu');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                toggleBtn.setAttribute('aria-label', 'Abrir menu');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
     });
 </script>
 

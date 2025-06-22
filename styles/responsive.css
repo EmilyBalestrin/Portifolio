@@ -1,48 +1,42 @@
 
 @media (max-width: 768px) {
-    /* SEÇÃO INÍCIO */
+
+    /* Seção Início (#home) */
     #home .row {
         flex-direction: column-reverse;
     }
-
     #home .col-md-6 {
         text-align: center !important;
         padding-right: 0 !important;
     }
-
     .order-1, .order-2 {
         order: unset !important;
     }
-
     .profile-photo {
         width: 180px !important;
         height: 180px !important;
         margin: 0 auto 20px;
     }
-
     .display-4 {
         font-size: 2.2rem;
     }
 
-    /* SEÇÃO HABILIDADES */
+    /* Seção Habilidades (#skills) */
     #skills .card {
         padding: 0.5rem !important;
         margin-bottom: 1rem;
     }
-
     #skills .card img {
         max-height: 50px !important;
     }
-
     #skills .row {
         justify-content: center;
     }
 
-    /* SEÇÃO EXPERIÊNCIA */
+    /* Seção Experiência (timeline) */
     .timeline::before {
         left: 20px;
     }
-
     .timeline-container {
         width: 100% !important;
         padding-left: 2.5rem;
@@ -50,20 +44,199 @@
         text-align: left !important;
         left: 0 !important;
     }
-
     .timeline-dot {
         left: 0 !important;
         top: 0.7rem;
         transform: none;
     }
 
-    /* SEÇÃO CERTIFICAÇÕES */
+    /* Seção Certificações (#certifications) */
     #certifications .card {
         padding: 0.5rem !important;
         margin-bottom: 1rem;
     }
-
     #certifications img {
         max-height: 100px !important;
+    }
+
+    /* Menu Toggle (hamburguer) */
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--text-light);
+        position: relative;
+    }
+
+    /* Menu de navegação */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bg-dark);
+        z-index: 1000;
+        padding: 2rem;
+        gap: 2rem;
+        transition: opacity 0.3s ease;
+    }
+    .nav-menu.active {
+        display: flex !important;
+    }
+    .nav-menu .nav-link {
+        font-size: 1.5rem;
+        color: var(--text-light);
+        text-align: center;
+        transition: color 0.3s;
+    }
+    .nav-menu .nav-link:hover {
+        color: var(--secondary-color);
+    }
+
+    /* Bloqueia scroll quando menu aberto */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Ajustes Seção Início */
+    #home {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    #home .profile-photo {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    #home h1,
+    #home p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Ajustes Seção Habilidades */
+    #skills h2 {
+        margin-bottom: 1rem; /* antes era maior */
+    }
+    #skills p {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 580px) {
+    header nav .nav {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.5rem 1rem;
+        justify-content: center;
+        padding: 0;
+    }
+
+    header nav .nav-item {
+        text-align: center;
+    }
+
+    header nav .nav-link {
+        padding: 0.5rem 0.8rem;
+        display: inline-block;
+    }
+
+    /* Evita quebra e mantem centralizado */
+    header nav .nav {
+        width: auto;
+    }
+
+    /* Ajustes gerais para evitar overflow */
+    body, html {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* INÍCIO */
+    #home {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    #home .profile-photo {
+        width: 150px !important;
+        height: 150px !important;
+        margin: 1rem auto 2rem auto;
+        display: block;
+    }
+
+    #home .col-md-6 {
+        text-align: center !important;
+        padding-right: 0 !important;
+    }
+
+    #home h1.display-4 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 0.9rem;
+    }
+
+    /* HABILIDADES - SKILLS */
+    #skills .row {
+        justify-content: center;
+    }
+
+    #skills article {
+        flex: 0 0 45% !important; /* 2 cards por linha */
+        max-width: 45% !important;
+        margin-bottom: 1rem;
+    }
+
+    /* EXPERIÊNCIA - TIMELINE */
+    .timeline::before {
+        left: 8px !important;
+    }
+
+    .timeline-container {
+        width: 100% !important;
+        padding-left: 2.5rem !important;
+        padding-right: 1rem !important;
+        text-align: left !important;
+        left: 0 !important;
+    }
+
+    .timeline-container.left,
+    .timeline-container.right {
+        left: 0 !important;
+    }
+
+    .timeline-dot {
+        left: 0 !important;
+    }
+
+    #skills .row {
+        justify-content: center;
+        gap: 0;
+    }
+
+    #skills article {
+        flex: 0 0 20% !important;
+        max-width: 40% !important;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        min-width: 100px;
+    }
+
+    #skills {
+        min-height: 400px; /* aumenta a altura mínima da seção */
+        padding-bottom: 3rem; /* mais espaçamento inferior */
     }
 }
