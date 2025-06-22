@@ -450,19 +450,19 @@
             <div class="row g-4 justify-content-center d-flex align-items-stretch text-center">
                 <p class="text-center text-muted mb-5">Ou, se preferir, me envie uma mensagem diretamente</p>
                 <div class="card shadow-sm p-4 contact-card-custom">
-                    <form id="form-contato">
+                    <form id="form-contato" action="https://formspree.io/f/movwkqkz" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="nome" class="form-label text-light">Nome</label>
-                                <input type="text" class="form-control input-custom" id="nome" placeholder="Seu nome completo" required>
+                                <input type="text" class="form-control input-custom" id="nome" name="nome" placeholder="Seu nome completo" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label text-light">Email</label>
-                                <input type="email" class="form-control input-custom" id="email" placeholder="seu@email.com" required>
+                                <input type="email" class="form-control input-custom" id="email" name="_replyto" placeholder="seu@email.com" required>
                             </div>
                             <div class="col-12">
                                 <label for="mensagem" class="form-label text-light">Mensagem</label>
-                                <textarea class="form-control input-custom" id="mensagem" rows="3" placeholder="Digite sua mensagem aqui..." required></textarea>
+                                <textarea class="form-control input-custom" id="mensagem" name="mensagem" rows="3" placeholder="Digite sua mensagem aqui..." required></textarea>
                             </div>
                         </div>
                         <div class="text-center mt-4">
@@ -512,29 +512,6 @@
             icon.classList.remove(moonIconClass);
             icon.classList.add(sunIconClass);
         }
-    });
-</script>
-
-<script>
-    document.getElementById("form-contato").addEventListener("submit", function (e) {
-        e.preventDefault(); // Impede envio padrão
-
-        const nome = encodeURIComponent(document.getElementById("nome").value);
-        const email = encodeURIComponent(document.getElementById("email").value);
-        const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
-
-        const url = `https://script.google.com/macros/s/AKfycbxcXg941Q19i46dMPSb26VW9P5ni-e4YJ4EdmxJAER4MvFrqe_ot_tZWLMK8VPcRbAl3w/exec?nome=${nome}&email=${email}&mensagem=${mensagem}`;
-
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                alert("Mensagem enviada com sucesso!");
-                document.getElementById("form-contato").reset();
-            })
-            .catch(error => {
-                alert("Erro ao enviar mensagem. Tente novamente.");
-                console.error(error);
-            });
     });
 </script>
 
