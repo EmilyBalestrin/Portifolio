@@ -519,18 +519,14 @@
     document.getElementById("form-contato").addEventListener("submit", function (e) {
         e.preventDefault(); // Impede envio padrão
 
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        const mensagem = document.getElementById("mensagem").value;
+        const nome = encodeURIComponent(document.getElementById("nome").value);
+        const email = encodeURIComponent(document.getElementById("email").value);
+        const mensagem = encodeURIComponent(document.getElementById("mensagem").value);
 
-        fetch("https://script.google.com/macros/s/AKfycbxcXg941Q19i46dMPSb26VW9P5ni-e4YJ4EdmxJAER4MvFrqe_ot_tZWLMK8VPcRbAl3w/exec", {
-            method: "POST",
-            body: JSON.stringify({ nome, email, mensagem }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then(response => response.json())
+        const url = `https://script.google.com/macros/s/AKfycbxcXg941Q19i46dMPSb26VW9P5ni-e4YJ4EdmxJAER4MvFrqe_ot_tZWLMK8VPcRbAl3w/exec?nome=${nome}&email=${email}&mensagem=${mensagem}`;
+
+        fetch(url)
+            .then(response => response.text())
             .then(data => {
                 alert("Mensagem enviada com sucesso!");
                 document.getElementById("form-contato").reset();
