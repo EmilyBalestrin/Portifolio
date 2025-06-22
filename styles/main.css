@@ -438,11 +438,16 @@ a:hover {
 
 /* FORMULÁRIO */
 .input-custom {
-    background-color: var(--bg-light);
+    background-color: var(--bg-lighter);
     border: 1px solid var(--accent-color);
-    color: var(--text-light);
+    color: var(--text-gray); /* ← cor do texto digitado */
     border-radius: 0.5rem;
     padding: 0.75rem;
+}
+
+.input-custom::placeholder {
+    color: var(--text-gray); /* ou #bbbbbb para mais claro */
+    opacity: 1;     /* garante visibilidade */
 }
 
 .input-custom:focus {
