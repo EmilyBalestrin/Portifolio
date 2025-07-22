@@ -6,7 +6,7 @@ Além disso, este projeto foi desenvolvido como **trabalho final da disciplina d
 
 ---
 
-🔗 **Acesse aqui**: [emilybalestrin.github.io/Portifolio](https://emilybalestrin.github.io/Portfolio/)
+🔗 **Acesse aqui**: [emilybalestrin.github.io/Portfolio](https://emilybalestrin.github.io/Portfolio/)
 
 ---
 
